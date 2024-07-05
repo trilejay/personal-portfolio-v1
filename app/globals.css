@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 0, 0, 0; /* Default to dark text for light mode */
   --background-start-rgb: 240, 240, 240; /* Light grey */
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; /* White */
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255; /* White text for dark mode */
+    --background-start-rgb: 0, 0, 0; /* Black background start for dark mode */
+    --background-end-rgb: 0, 0, 0; /* Black background end for dark mode */
   }
 }
 
@@ -22,7 +22,7 @@ body {
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
-    )
+    ),
     rgb(var(--background-start-rgb));
 }
 
