@@ -26,7 +26,7 @@ export default function Home() {
                 loading="lazy"
                 src="/IMG_2384.jpg"  // Adjust the path based on your directory structure
                 alt="Profile Image"
-                className="object-cover w-full h-full rounded-[35%]"
+                className="object-cover w-full h-full rounded-[10%]"
                 style={{ maxWidth: "70%", width: "70%" }}
               />
           </div>
@@ -72,6 +72,33 @@ export default function Home() {
               <div className="text-2xl tracking-normal leading-[50px] mb-12 text-slate-900 mt-8 w-[75%]">
               During my most recent internship, I collaborated with designers on Figma, followed Hi-Fi prototypes, and built the front-end of a website following a mobile-first design system.
               This was my first time following <em>Agile</em> and <em>Scrum</em> principles!
+              </div>
+              <div className="flex flex-wrap gap-12 mb-8">
+                <button className="bg-blue-500 text-white rounded-full px-6 py-2">TypeScript</button>
+                <button className="bg-gray-800 text-white rounded-full px-6 py-2">Next.js</button>
+                <button className="bg-teal-500 text-white rounded-full px-6 py-2">Tailwind CSS</button>
+                <button className="bg-gray-900 text-white rounded-full px-6 py-2">Ghost CMS</button>
+                <button className="bg-orange-600 text-white rounded-full px-6 py-2">Git</button>
+              </div>
+            </div>
+          </div>
+          <div className="w-full h-full mt-12">
+            <iframe
+              src="https://unionize101.org"  // Replace with your website URL
+              title="Website Preview"
+              className="w-full h-full"
+              style={{ maxWidth: "80%", height: "800px", border: "none" }}
+            />
+          </div>
+      </div>
+      <div className="max-md:pt-20 flex flex-col w-full lg:ml-60">
+        <div className="flex flex-col w-full mt-72">
+            <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
+              <div className="text-6xl font-bold">
+               Joe Mama's Cloud Service.
+              </div>
+              <div className="text-2xl tracking-normal leading-[50px] mb-12 text-slate-900 mt-8 w-[75%]">
+              During my most recent internship, I collaborated with Joe
               </div>
               <div className="flex flex-wrap gap-12 mb-8">
                 <button className="bg-blue-500 text-white rounded-full px-6 py-2">TypeScript</button>
