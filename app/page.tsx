@@ -1,12 +1,14 @@
 import * as React from "react";
-import Head from 'next/head';
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: 'Matthew Ilejay',
+}
 export default function Home() {
   return (
+    <div className={` flex flex-col transition animateIn`}>
     <div className="flex flex-col justify-center items-center self-stretch mt-24 px-16 py-8 max-md:px-5">
-        <Head>
-        <link rel="icon" href="/M.jpeg" />
-        </Head>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <div className="flex max-md:flex-col gap-10  max-w-full">
         <div className="flex flex-col w-full max-md:w-[50%] lg:ml-32">
           <div className="flex flex-col self-stretch my-auto text-xl  text-slate-800 max-w-full">
@@ -14,7 +16,7 @@ export default function Home() {
               Hi, I'm Matt,
             </div>
             <div className="text-4xl tracking-normal leading-[60px] text-indigo-800 mt-12 w-[90%]">
-              an aspiring Software Engineer with a background in Biostatistics.
+            an aspiring Software Engineer with a background in Biostatistics.
             </div>
             
             <div className="text-2xl mt-20 italic">
@@ -135,7 +137,7 @@ export default function Home() {
           </div>
       </div>
     </div>
-
+    </div>
 
   );
 }

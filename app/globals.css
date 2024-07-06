@@ -3,17 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0; /* Default to dark text for light mode */
-  --background-start-rgb: 240, 240, 240; /* Light grey */
-  --background-end-rgb: 255, 255, 255; /* White */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255; /* White text for dark mode */
-    --background-start-rgb: 0, 0, 0; /* Black background start for dark mode */
-    --background-end-rgb: 0, 0, 0; /* Black background end for dark mode */
-  }
+  --foreground-rgb: 0, 0, 0; /* Default to dark text */
+  --background-start-rgb: 225, 230, 242; /* Light grey */
+  --background-end-rgb: 225, 230, 242; /* Light grey */
 }
 
 body {
@@ -30,4 +22,23 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animateIn {
+  animation: slideInFromRight 1s ease-out;
+}
+
+.fade-in {
+  @apply transition-opacity duration-700 ease-in opacity-0 hover:opacity-100;
 }
