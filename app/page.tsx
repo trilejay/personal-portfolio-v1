@@ -1,13 +1,35 @@
 import * as React from "react";
 import { Metadata } from 'next'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import Link from "next/link";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
 export const metadata: Metadata = {
   title: 'Matthew Ilejay',
+
 }
 export default function Home() {
   return (
     <div className={` flex flex-col transition animateIn`}>
-    <div className="flex flex-col justify-center items-center self-stretch mt-24 px-16 py-8 max-md:px-5">
+    <div className="flex flex-col justify-center items-center self-stretch mt-16 px-16 py-8 max-md:px-5">
+    <div className="flex max-md:flex-col gap-20 max-w-full mb-12 ">
+          <Link href="https://www.linkedin.com/in/matthew-ilejay-8403441ab/" className="text-blue-500">
+            <FontAwesomeIcon icon={faLinkedin} size="4x" />
+          </Link>
+          <a href="https://github.com/trilejay" className="text-black">
+            <FontAwesomeIcon icon={faGithub} size="4x" />
+          </a>
+          <a href="mailto:milejay14@gmail.com" className="text-blue-500">
+            <FontAwesomeIcon icon={faEnvelope} size="4x" />
+          </a>
+          <a href="tel:+16616457503" className="text-blue-800">
+            <FontAwesomeIcon icon={faPhone} size="4x" />
+          </a>
+        </div>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <div className="flex max-md:flex-col gap-10  max-w-full">
         <div className="flex flex-col w-full max-md:w-[50%] lg:ml-32">
@@ -16,15 +38,13 @@ export default function Home() {
               Hi, I'm Matt,
             </div>
             <div className="text-4xl tracking-normal leading-[60px] text-indigo-800 mt-12 w-[90%]">
-            an aspiring Software Engineer with a background in Biostatistics.
+            an aspiring Software Engineer with a background in Public Health and Biostatistics. I'm open to learning new technologies and concepts.
             </div>
-            
-            <div className="text-2xl mt-20 italic">
+            <div className="text-2xl mt-40 italic">
               Scroll to see what I've learned so far.
             </div>
           </div>
         </div>
-
         {/* Right Column (Image) */}
         <div className="ml-10 max-md:pt-20 flex flex-col w-full mt-12">
           <div className="aspect-w-1 aspect-h-1 ">
@@ -46,8 +66,8 @@ export default function Home() {
               Front-end development
               </div>
               <div className="text-xl tracking-normal leading-[40px] mb-12 text-slate-900 mt-8 w-[80%]">
-              During my most recent internship, I collaborated with designers on Figma, followed Hi-Fi prototypes, and built the front-end of a website following a mobile-first design system.
-              This was my first time following <em>Agile</em> and <em>Scrum</em> principles.
+              Through relevant coursework and internships, I've become experienced in front-end development. During my previous internship, I collaborated with designers on Figma, followed <em>Agile</em> and <em>Scrum</em> principles, and built the front-end of a website following a mobile-first design system.
+             
               </div>
               <div className="flex flex-wrap gap-12 mb-8">
                 <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">TypeScript</button>
@@ -118,7 +138,8 @@ export default function Home() {
                Programming Fundamentals
               </div>
               <div className="text-xl tracking-normal leading-[40px] mb-2 text-slate-900 mt-8 w-[75%]">
-              Through general coursework and self-learning, I put emphasis on really hammering down the fundamentals of programming, including <em>data structures, algorithms, OOP, types, functions, and debugging.</em>
+              Through general coursework and self-learning, I put emphasis on really hammering down the fundamentals of programming, including <em>data structures, algorithms, OOP, types, functions, and using the debugger. </em>
+               Some other languages I am proficient at include C, C++, and JavaScript.
               </div>
             </div>
           </div>
@@ -129,7 +150,7 @@ export default function Home() {
               <div className="text-4xl">
                <em>That's all... for now!</em>
               </div>
-              <div className="text-xl tracking-normal leading-[40px] mb-2 text-slate-900 mt-8 w-[75%]">
+              <div className="text-xl tracking-normal leading-[40px] mb-24 text-slate-900 mt-8 w-[75%]">
               Thanks for making it this far! I plan to expand my knowledge by participating in hackathons, grinding out leetcode, and doing personal projects.
               My next goal is to learn more about machine learning through free resources and projects. Thanks for reading my portolio! :)
               </div>
