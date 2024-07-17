@@ -84,9 +84,6 @@ export default function Home() {
               <div className="flex flex-wrap gap-12 mb-8">
                 <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Express.js</button>
                 <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Node.js</button>
-                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">HTTP</button>
-                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Form Handling</button>
-                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Routing</button>
               </div>
             </div>
           </div>
