@@ -38,7 +38,7 @@ export default function Home() {
               Hi, I'm Matt,
             </div>
             <div className="text-4xl tracking-normal leading-[60px] text-indigo-800 mt-12 w-[90%]">
-            an aspiring Software Engineer with a background in Public Health and Biostatistics. I'm open to learning new technologies and concepts.
+            an aspiring Software Engineer with a background in Public Health and Biostatistics.
             </div>
             <div className="text-2xl mt-40 italic">
               Scroll to see what I've learned so far.
@@ -63,11 +63,16 @@ export default function Home() {
         <div className="flex flex-col w-full mt-32">
             <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
               <div className="text-5xl font-bold">
-              Front-end development
+              Full-stack development
               </div>
               <div className="text-xl tracking-normal leading-[40px] mb-12 text-slate-900 mt-8 w-[80%]">
-              Through relevant coursework and internships, I've become experienced in front-end development. During my previous internship, I collaborated with designers on Figma, followed <em>Agile</em> and <em>Scrum</em> principles, and built the front-end of a website following a mobile-first design system.
-             
+              My internship at Pinear provided me with valuable experience in front-end development. Following Figma design handoffs, and adhering to <strong>Agile</strong> and <strong>Scrum</strong> principles, I led the development of the front-end of an informational website, ensuring responsiveness by utilizing 
+               Tailwind <strong>breakpoints</strong>, <strong>media queries</strong>, <strong>relative sizing</strong>, and <strong>flexboxes</strong>.
+             <br>
+             </br>
+             <br>
+             </br>
+             I also have experience with back-end development in areas such as <strong>Express.js</strong>, <strong>Node.js</strong>, <strong>HTTP</strong>, <strong>form handling</strong>, and <strong>routing</strong>.
               </div>
               <div className="flex flex-wrap gap-12 mb-8">
                 <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">TypeScript</button>
@@ -75,6 +80,13 @@ export default function Home() {
                 <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Tailwind CSS</button>
                 <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Ghost CMS</button>
                 <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Git</button>
+              </div>
+              <div className="flex flex-wrap gap-12 mb-8">
+                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Express.js</button>
+                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Node.js</button>
+                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">HTTP</button>
+                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Form Handling</button>
+                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Routing</button>
               </div>
             </div>
           </div>
@@ -96,11 +108,11 @@ export default function Home() {
                AWS Cloud Services
               </div>
               <div className="text-xl tracking-normal leading-[40px] mb-2 text-slate-900 mt-8 w-[75%]">
-              After my internship, I wanted to learn more about <em>cloud services</em>, so I downloaded a dataset of the 50,000 best selling products on Amazon, stored it into an <em>S3 bucket</em>, and connected it to 
-              <em> Amazon Quicksight</em> to create data visualizations.
+              After my internship, I wanted to learn more about <strong>cloud services</strong>, so I downloaded a dataset of the 50,000 best selling products on Amazon, stored it into an <strong>S3 bucket</strong>, and connected it to 
+              <strong> Amazon Quicksight</strong> to create data visualizations.
               </div>
               <div className="text-xl tracking-normal leading-[40px] mb-12 text-slate-900 mt-4 w-[75%]">
-              Oh, and I built this portfolio and hosted it using <em>CloudFront</em>, <em>AWS Amplify,</em><em> S3 buckets</em>, and <em>Route 53.</em> 
+              Oh, and I built this portfolio and hosted it using <strong>CloudFront</strong>, <strong>AWS Amplify,</strong><strong> S3 buckets</strong>, and <strong>Route 53.</strong> 
               </div>
               <div className="flex flex-wrap gap-12 mb-8">
                 <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">S3</span>
@@ -119,9 +131,9 @@ export default function Home() {
               Databases and ETL Pipelines
               </div>
               <div className="text-xl tracking-normal leading-[40px] mb-12 text-slate-900 mt-8 w-[75%]">
-              I then wanted to learn more about <em>databases</em>, so I decided to make an <em>automated ETL pipeline</em> using Python.
-              I fetched, parsed, and transformed raw JSON data from a free API, created a <em>MySQL database</em>, and stored the transformed data into that database using
-              <em> SQLAlchemy</em>.
+              I then wanted to learn more about <strong>databases</strong>, so I decided to make an <strong>automated ETL pipeline</strong> using Python.
+              I fetched, parsed, and transformed raw JSON data from a free API, created a <strong>MySQL database</strong>, and stored the transformed data into that database using
+              <strong> SQLAlchemy</strong>.
               </div>
               <div className="flex flex-wrap gap-12 mb-8">
               <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Python</span>
@@ -138,8 +150,8 @@ export default function Home() {
                Programming Fundamentals
               </div>
               <div className="text-xl tracking-normal leading-[40px] mb-2 text-slate-900 mt-8 w-[75%]">
-              Through general coursework and self-learning, I put emphasis on really hammering down the fundamentals of programming, including <em>data structures, algorithms, OOP, types, functions, and using the debugger. </em>
-               Some other languages I am proficient at include C, C++, and JavaScript.
+              Through my time learning, I really put emphasis on understanding the fundamentals of programming, including <strong>data structures, memory allocation, time complexity, algorithms, OOP, types, functions, and debugging. </strong>
+              Some other languages I am proficient at include C, C++, and JavaScript.
               </div>
             </div>
           </div>
@@ -148,11 +160,10 @@ export default function Home() {
         <div className="flex flex-col w-full mt-32">
             <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
               <div className="text-4xl">
-               <em>That's all... for now!</em>
+               <strong>That's all... for now!</strong>
               </div>
               <div className="text-xl tracking-normal leading-[40px] mb-24 text-slate-900 mt-8 w-[75%]">
-              Thanks for making it this far! I plan to expand my knowledge by participating in hackathons, grinding out leetcode, and doing personal projects.
-              My next goal is to learn more about machine learning through free resources and projects. Thanks for reading my portolio! :)
+              Thanks for making it this far! I plan to expand my knowledge by participating in hackathons, tech conferences, grinding out leetcode, and building more things. Thanks for reading my portolio! :)
               </div>
             </div>
           </div>
