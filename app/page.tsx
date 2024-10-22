@@ -140,27 +140,24 @@ const toggleAWS = () => {
       {isFullStackVisible && (
         <div className="text-xl tracking-normal leading-[40px] mb-12 text-slate-900 mt-8 w-[80%] transition-all duration-500 ease-in-out">
           <p>
-            My internship at Pinear provided me with valuable experience in front-end development.
-            Following Figma design handoffs and adhering to <strong>Agile</strong> and <strong>Scrum</strong> principles, I led the development of the front-end of an informational website, ensuring responsiveness by utilizing 
-            Tailwind <strong>breakpoints</strong>, <strong>media queries</strong>, <strong>relative sizing</strong>, and <strong>flexboxes</strong>.
+          During my internship at a small startup, I gained valuable experience in front-end development. I led the development of a responsive informational website that was use by over 10 company clients, translating Figma design handoffs into functional code using Next.js, TypeScript, HTML, and Tailwind CSS. I ensured the website’s responsiveness by employing Tailwind breakpoints, media queries, relative sizing, and flexbox layouts while adhering to Agile and Scrum methodologies within a collaborative team of designers, marketers, and engineers.
           </p>
           <br />
           <p>
-            I also have experience with back-end development in areas such as <strong>Express.js</strong>, <strong>Node.js</strong>, <strong>HTTP</strong>, <strong>form handling</strong>, and <strong>routing</strong>.
+          In addition to my front-end experience, I have hands-on experience in back-end development with Node.js, Express.js, and JavaScript. This includes handling HTTP requests, managing form submissions, and implementing routing for RESTful APIs. I also developed a full-stack web application utilizing Flask and React, which features web scraping with BeautifulSoup4. Furthermore, I built a personal portfolio website that employed MongoDB for data management and efficient CRUD operations.
           </p>
 
           {/* Skills section */}
           <div className="flex flex-wrap gap-12 mb-8 mt-8">
             <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">TypeScript</button>
-            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Next.js</button>
-            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Tailwind CSS</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">JavaScript</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Next</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">React</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">TailwindCSS</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Node</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Express</button>
             <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Flask</button>
             <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Git</button>
-          </div>
-
-          <div className="flex flex-wrap gap-12 mb-8">
-            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Express.js</button>
-            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Node.js</button>
           </div>
         </div>
           )}
