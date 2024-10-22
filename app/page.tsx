@@ -66,12 +66,11 @@ const toggleAWS = () => {
             </div>
           </div>
         </div>
-        {/* Right Column (Image) */}
         <div className="ml-10 max-md:pt-20 flex flex-col w-full mt-12">
           <div className="aspect-w-1 aspect-h-1 ">
           <img
                 loading="lazy"
-                src="/IMG_2384.jpg"  // Adjust the path based on your directory structure
+                src="/IMG_3099.jpg"  
                 alt="Profile Image"
                 className="object-cover w-full h-full rounded-[10%]"
                 style={{ maxWidth: "80%", width: "80%" }}
