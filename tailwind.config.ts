@@ -15,16 +15,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    function ({ addUtilities }) {
-      const newUtilities = {
-        '.text-shadow-glow': {
-          textShadow: '0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5)',
-        },
-      };
-      addUtilities(newUtilities, ['responsive', 'hover']);
-    },
-  ],
+  plugins: [],
 };
 
 export default config;
