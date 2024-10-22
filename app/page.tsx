@@ -34,6 +34,12 @@ const toggleAWS = () => {
   setIsAWSVisibile(!isAWSVisible);
 };
 
+const [isMLVisible, setIsMLVisible] = React.useState(false);
+
+const toggleML = () => {
+  setIsMLVisible(!isMLVisible);
+};
+
   return (
     <div className={` flex flex-col transition animateIn`}>
     <div className="flex flex-col justify-center items-center self-stretch mt-16 px-16 py-8 max-md:px-5">
@@ -217,6 +223,23 @@ const toggleAWS = () => {
                 <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Route53</span>
               </div>
               </div>
+              )}
+            </div>
+          </div>
+      </div>
+      <div className="max-md:pt-20 flex flex-col w-full lg:ml-60">
+        <div className="flex flex-col w-full mt-10">
+            <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
+            <div className="text-5xl font-bold cursor-pointer transition duration-300 ease-in-out hover:text-blue-600" onClick={toggleML}>
+              Machine Learning
+              </div>
+              {isMLVisible && (
+              <div className="text-xl tracking-normal leading-[40px] mb-2 text-slate-900 mt-8 w-[75%]">
+              <p>
+              I’ve recently begun the Machine Learning course by Andrew Ng on Coursera, where I’ve started learning the fundamentals, including regression and classification. This course has provided me with a strong foundation for understanding how machine learning models make predictions from data. In addition to this, I plan to take a machine learning course in the Spring as part of my undergraduate studies at Oregon State University, where I’ll continue to build on these skills and explore more complex techniques such as deep learning and neural networks!
+              </p>
+            </div>
+            
               )}
             </div>
           </div>
