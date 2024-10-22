@@ -1,18 +1,39 @@
+'use client';
 import * as React from "react";
-import { Metadata } from 'next'
+import { Metadata } from 'next';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import Link from "next/link";
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false
 
-export const metadata: Metadata = {
-  title: 'Matthew Ilejay',
-
-}
 export default function Home() {
+  const [isFullStackVisible, setIsFullStackVisible] = React.useState(false);
+
+  const toggleFullStack = () => {
+    setIsFullStackVisible(!isFullStackVisible);
+};
+const [isDatabasesVisible, setIsDatabasesVisible] = React.useState(false);
+
+const toggleDatabases = () => {
+  setIsDatabasesVisible(!isDatabasesVisible);
+};
+
+const [isDataStructuresVisible, setIsDataStructuresVisibile] = React.useState(false);
+
+const toggleDataStructures = () => {
+  setIsDataStructuresVisibile(!isDataStructuresVisible);
+};
+
+const [isAWSVisible, setIsAWSVisibile] = React.useState(false);
+
+const toggleAWS = () => {
+  setIsAWSVisibile(!isAWSVisible);
+};
+
   return (
     <div className={` flex flex-col transition animateIn`}>
     <div className="flex flex-col justify-center items-center self-stretch mt-16 px-16 py-8 max-md:px-5">
@@ -34,14 +55,14 @@ export default function Home() {
       <div className="flex max-md:flex-col gap-10  max-w-full">
         <div className="flex flex-col w-full max-md:w-[50%] lg:ml-32">
           <div className="flex flex-col self-stretch my-auto text-xl  text-slate-800 max-w-full">
-            <div className="text-9xl font-bold">
-              Hi, I'm Matt,
+            <div className="text-9xl font-bold ">
+              Hi, I'm Matt!
             </div>
             <div className="text-4xl tracking-normal leading-[60px] text-indigo-800 mt-12 w-[90%]">
-            an aspiring Software Engineer with a background in Public Health and Biostatistics.
+            I'm an aspiring Software Engineer set to graduate with a B.S in CS from Oregon State University in December 2025.
             </div>
             <div className="text-2xl mt-40 italic">
-              Scroll to see what I've learned so far.
+             Click each topic to see what I've learned so far!
             </div>
           </div>
         </div>
@@ -58,98 +79,149 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+  
       <div className="max-md:pt-20 flex flex-col w-full lg:ml-60">
         <div className="flex flex-col w-full mt-32">
             <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
-              <div className="text-5xl font-bold">
-              Full-stack development
+            <div className="text-5xl font-bold cursor-pointer transition duration-300 ease-in-out hover:text-blue-600" onClick={toggleDataStructures}>
+              Data Structures & Algorithms
               </div>
-              <div className="text-xl tracking-normal leading-[40px] mb-12 text-slate-900 mt-8 w-[80%]">
-              My internship at Pinear provided me with valuable experience in front-end development. Following Figma design handoffs, and adhering to <strong>Agile</strong> and <strong>Scrum</strong> principles, I led the development of the front-end of an informational website, ensuring responsiveness by utilizing 
-               Tailwind <strong>breakpoints</strong>, <strong>media queries</strong>, <strong>relative sizing</strong>, and <strong>flexboxes</strong>.
-             <br>
-             </br>
-             <br>
-             </br>
-             I also have experience with back-end development in areas such as <strong>Express.js</strong>, <strong>Node.js</strong>, <strong>HTTP</strong>, <strong>form handling</strong>, and <strong>routing</strong>.
-              </div>
-              <div className="flex flex-wrap gap-12 mb-8">
-                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">TypeScript</button>
-                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Next.js</button>
-                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Tailwind CSS</button>
-                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Ghost CMS</button>
-                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Git</button>
-              </div>
-              <div className="flex flex-wrap gap-12 mb-8">
-                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Express.js</button>
-                <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Node.js</button>
-              </div>
+              {isDataStructuresVisible && (
+              <div className="text-xl tracking-normal leading-[40px] mb-2 text-slate-900 mt-8 w-[75%]">
+              <p>
+                Throughout my studies, I've developed a strong foundation in key concepts and practical implementations in data structures & algorithms:
+              </p>
+              <ul className="list-disc pl-5">
+                <li>
+                  <strong>Fundamental Data Structures:</strong> Gained hands-on experience with core data structures such as dynamic arrays, linked lists, binary search trees (BST), AVL trees, hash maps, and min heaps. Understanding their properties and use cases allowed me to choose the most appropriate structure for different applications.
+                </li>
+                <li>
+                  <strong>Implementation:</strong> I created Python implementations of several fundamental data structures, each equipped with methods for common operations, including:
+                  <ul className="list-disc pl-5">
+                    <li>The <strong>DynamicArray</strong> class includes methods to resize, append, insert, remove, slice, merge, map, filter, reduce, and find mode.</li>
+                    <li>The <strong>BST</strong> class implements methods for adding, removing, checking containment, and finding minimum and maximum values.</li>
+                    <li>The <strong>AVLTree</strong> class maintains balanced tree properties through rotation during insertions and deletions.</li>
+                    <li>The <strong>LinkedList</strong> class supports operations for insertion, deletion, and traversal.</li>
+                    <li>The <strong>HashMap</strong> class facilitates adding, removing, and retrieving key-value pairs.</li>
+                    <li>The <strong>MinHeap</strong> class allows for efficient minimum extraction and heapification.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Algorithm Design:</strong> Explored various algorithm design techniques, including divide and conquer, dynamic programming, and greedy algorithms, enabling me to tackle complex problems systematically and develop efficient solutions.
+                </li>
+                <li>
+                  <strong>Time and Space Complexity:</strong> Learned to analyze the efficiency of algorithms using Big O notation, helping me evaluate their performance in terms of time and space requirements, which is vital for optimizing code and ensuring scalability.
+                </li>
+                <li>
+                  <strong>Sorting and Searching Algorithms:</strong> Implemented and compared various sorting algorithms (e.g., quicksort, mergesort, bubblesort) and searching techniques (e.g., binary search), essential for manipulating and retrieving data efficiently.
+                </li>
+              </ul>
+            </div>
+            
+              )}
             </div>
           </div>
-          <div className="w-full h-full mt-12">
-            <iframe
-              src="https://unionize101.org"  // Replace with your website URL
-              title="Website Preview"
-              className="w-full h-full"
-              style={{ maxWidth: "95%", height: "800px", border: "none" }}
-            />
+      </div>
+
+
+
+  <div className="max-md:pt-20 flex flex-col w-full lg:ml-60">
+  <div className="flex flex-col w-full mt-10 ">
+    <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
+      {/* Clickable title */}
+      <div
+        className="text-5xl font-bold cursor-pointer transition duration-300 ease-in-out hover:text-blue-600"
+        onClick={toggleFullStack}
+      >
+        Full-stack Development
+      </div>
+
+      {/* Dropdown content */}
+      {isFullStackVisible && (
+        <div className="text-xl tracking-normal leading-[40px] mb-12 text-slate-900 mt-8 w-[80%] transition-all duration-500 ease-in-out">
+          <p>
+            My internship at Pinear provided me with valuable experience in front-end development.
+            Following Figma design handoffs and adhering to <strong>Agile</strong> and <strong>Scrum</strong> principles, I led the development of the front-end of an informational website, ensuring responsiveness by utilizing 
+            Tailwind <strong>breakpoints</strong>, <strong>media queries</strong>, <strong>relative sizing</strong>, and <strong>flexboxes</strong>.
+          </p>
+          <br />
+          <p>
+            I also have experience with back-end development in areas such as <strong>Express.js</strong>, <strong>Node.js</strong>, <strong>HTTP</strong>, <strong>form handling</strong>, and <strong>routing</strong>.
+          </p>
+
+          {/* Skills section */}
+          <div className="flex flex-wrap gap-12 mb-8 mt-8">
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">TypeScript</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Next.js</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Tailwind CSS</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Flask</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Git</button>
+          </div>
+
+          <div className="flex flex-wrap gap-12 mb-8">
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Express.js</button>
+            <button className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600 transition">Node.js</button>
+          </div>
+        </div>
+          )}
+        </div>
+      </div>
+    </div>
+      
+
+      <div className="max-md:pt-20 flex flex-col w-full lg:ml-60">
+        <div className="flex flex-col w-full mt-10">
+            <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full ">
+              <div className="text-5xl font-bold cursor-pointer transition duration-300 ease-in-out hover:text-blue-600" onClick={toggleDatabases}>
+               Databases
+              </div>
+              {isDatabasesVisible && (
+              <div className="transition-all duration-500 ease-in-out text-xl tracking-normal leading-[40px] mb-2 text-slate-900 mt-8 w-[75%]">
+                Throughout my studies and projects, I've gained a solid understanding of databases, particularly in the context of SQL and relational database management systems. Some key concepts I've learned include:
+                <ul className="list-disc ml-6 mt-4">
+                  <li><strong>Database Fundamentals:</strong> I learned about the structure of databases, including tables, rows, and columns, and the importance of primary and foreign keys in establishing relationships between tables.</li>
+                  <li><strong>SQL:</strong> I became proficient in SQL fundamentals, enabling me to perform CRUD operations within a database. This includes understanding complex queries, joins, and subqueries to manipulate and retrieve data effectively.</li>
+                  <li><strong>Database Design:</strong> I applied the principles of database normalization, ensuring that data is organized efficiently to minimize redundancy and improve data integrity. I applied these principles while designing schemas for my projects.</li>
+                  <li><strong>Integration with Applications:</strong> I applied my database knowledge in projects, integrating databases with web applications by creating backend databases and using MongoDB, MySQL, and PostgreSQL to store data.</li>
+                  <li><strong>REST API Implementation</strong> I developed RESTful APIs that connected front-end applications to the backend databases. This involved using frameworks like Express.js to create endpoints for data retrieval and manipulation, allowing seamless communication between the client and server.</li>
+                </ul>
+             
+              
+              <div className="flex flex-wrap gap-12 mt-8  mb-8">
+                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">SQL</span>
+                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">PostgreSQL</span>
+                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">MongoDB</span>
+                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">MySQL</span>
+                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">REST APIs</span>
+              </div>
+              </div>
+              )}
+            </div>
           </div>
       </div>
 
       {/* Start of AWS Deployment */}
       <div className="max-md:pt-20 flex flex-col w-full lg:ml-60">
-        <div className="flex flex-col w-full mt-32">
+        <div className="flex flex-col w-full mt-10">
             <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
-              <div className="text-5xl font-bold">
+            <div className="text-5xl font-bold cursor-pointer transition duration-300 ease-in-out hover:text-blue-600" onClick={toggleAWS}>
                AWS Cloud Services
               </div>
+              {isAWSVisible && (
               <div className="text-xl tracking-normal leading-[40px] mb-2 text-slate-900 mt-8 w-[75%]">
               After my internship, I wanted to learn more about <strong>cloud services</strong>, so I downloaded a dataset of the 50,000 best selling products on Amazon, stored it into an <strong>S3 bucket</strong>, and connected it to 
-              <strong> Amazon Quicksight</strong> to create data visualizations.
-              </div>
-              <div className="text-xl tracking-normal leading-[40px] mb-12 text-slate-900 mt-4 w-[75%]">
-              Oh, and I built this portfolio and hosted it using <strong>CloudFront</strong>, <strong>AWS Amplify,</strong><strong> S3 buckets</strong>, and <strong>Route 53.</strong> 
-              </div>
-              <div className="flex flex-wrap gap-12 mb-8">
+              <strong> Amazon Quicksight</strong> to create data visualizations. I also hosted this portfolio using <strong>CloudFront</strong>, <strong>AWS Amplify,</strong><strong> S3 buckets</strong>, and <strong>Route 53. </strong> 
+               Until Amazon started charging me and I had to switch to Vercel.
+              
+              <div className="flex flex-wrap gap-12 mt-8 mb-8">
+                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">AWS</span>
+                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Quicksight</span>
                 <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">S3</span>
-                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Route 53</span>
-                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">CloudFront</span>
-                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Amazon Quicksight</span>
-                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">AWS Amplify</span>
+                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Amplify</span>
+                <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Route53</span>
               </div>
-            </div>
-          </div>
-      </div>
-      <div className="max-md:pt-20 flex flex-col w-full lg:ml-60">
-        <div className="flex flex-col w-full mt-24">
-            <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
-              <div className="text-5xl font-bold">
-              Databases and ETL Pipelines
               </div>
-              <div className="text-xl tracking-normal leading-[40px] mb-12 text-slate-900 mt-8 w-[75%]">
-              I then wanted to learn more about <strong>databases</strong>, so I decided to make an <strong>automated ETL pipeline</strong> using Python.
-              I fetched, parsed, and transformed raw JSON data from a free API, created a <strong>MySQL database</strong>, and stored the transformed data into that database using
-              <strong> SQLAlchemy</strong>.
-              </div>
-              <div className="flex flex-wrap gap-12 mb-8">
-              <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">Python</span>
-              <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">MySQL</span>
-              <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">SQLAlchemy</span>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div className="max-md:pt-20 flex flex-col w-full lg:ml-60">
-        <div className="flex flex-col w-full mt-32">
-            <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
-              <div className="text-5xl font-bold">
-               Programming Fundamentals
-              </div>
-              <div className="text-xl tracking-normal leading-[40px] mb-2 text-slate-900 mt-8 w-[75%]">
-              Through my time learning, I really put emphasis on understanding the fundamentals of programming, including <strong>data structures, memory allocation, time complexity, algorithms, OOP, types, functions, and debugging. </strong>
-              Some other languages I am proficient at include C, C++, and JavaScript.
-              </div>
+              )}
             </div>
           </div>
       </div>
@@ -157,10 +229,12 @@ export default function Home() {
         <div className="flex flex-col w-full mt-32">
             <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
               <div className="text-4xl">
-               <strong>That's all... for now!</strong>
+               <strong>Extracurriculars!</strong>
               </div>
               <div className="text-xl tracking-normal leading-[40px] mb-24 text-slate-900 mt-8 w-[75%]">
-              Thanks for making it this far! I plan to expand my knowledge by participating in hackathons, tech conferences, grinding out leetcode, and building more things. Thanks for reading my portolio! :)
+              I recently won 2nd place in the TEDxSouthCentralLA Hackathon, where I developed a policy-driven solution to improve sustainable transportaiton within LA.
+              Also, I just got my CodePath certification, where I solved leetcode type problems, in groups, exclusively in Python.
+              Thanks for reading! :)
               </div>
             </div>
           </div>
