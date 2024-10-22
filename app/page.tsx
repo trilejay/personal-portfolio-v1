@@ -208,7 +208,7 @@ const toggleAWS = () => {
               <div className="text-xl tracking-normal leading-[40px] mb-2 text-slate-900 mt-8 w-[75%]">
               After my internship, I wanted to learn more about <strong>cloud services</strong>, so I downloaded a dataset of the 50,000 best selling products on Amazon, stored it into an <strong>S3 bucket</strong>, and connected it to 
               <strong> Amazon Quicksight</strong> to create data visualizations. I also hosted this portfolio using <strong>CloudFront</strong>, <strong>AWS Amplify,</strong><strong> S3 buckets</strong>, and <strong>Route 53. </strong> 
-               Until Amazon started charging me and I had to switch to Vercel.
+               ... until Amazon started charging me and I had to switch to Vercel.
               
               <div className="flex flex-wrap gap-12 mt-8 mb-8">
                 <span className="bg-blue-500 text-white rounded-full px-6 py-2 cursor-default hover:bg-blue-600">AWS</span>
