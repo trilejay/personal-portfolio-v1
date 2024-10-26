@@ -40,6 +40,13 @@ const toggleML = () => {
   setIsMLVisible(!isMLVisible);
 };
 
+const [isExtraVisible, setIsExtraVisible] = React.useState(false);
+
+const toggleExtra = () => {
+  setIsExtraVisible(!isExtraVisible);
+};
+
+
   return (
     <div className={` flex flex-col transition animateIn`}>
     <div className="flex flex-col justify-center items-center self-stretch mt-16 px-16 py-8 max-md:px-5">
@@ -246,15 +253,17 @@ const toggleML = () => {
       </div>
       <div className="max-md:pt-20 flex flex-col w-full lg:ml-60">
         <div className="flex flex-col w-full mt-32">
-            <div className="flex flex-col self-stretch my-auto text-xl text-slate-800 max-w-full">
-              <div className="text-4xl">
+            <div className="text-5xl font-bold cursor-pointer transition duration-300 ease-in-out hover:text-blue-600">
+              <div className="text-4xl" onClick={toggleExtra}>
                <strong>Extracurriculars!</strong>
               </div>
+              {isExtraVisible && (
               <div className="text-xl tracking-normal leading-[40px] mb-24 text-slate-900 mt-8 w-[75%]">
               I recently won 2nd place in the TEDxSouthCentralLA Hackathon, where I developed a policy-driven solution to improve sustainable transportaiton within LA.
               Also, I just got my CodePath certification, where I solved leetcode type problems, in groups, exclusively in Python.
               Thanks for reading! :)
               </div>
+              )}
             </div>
           </div>
       </div>
